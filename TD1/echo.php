@@ -14,6 +14,7 @@
            
           // On met la chaine de caractères "hello" dans la variable 'texte'
           // Les noms de variable commencent par $ en PHP
+          echo "<p><strong><h3>https://webinfo.iutmontp.univ-montp2.fr/~dejesusl/PHP/TD1/echo.php</h3></strong></p>";
           $texte = "hello Logan oui\n!";
 
           // On écrit le contenu de la variable 'texte' dans la page Web
@@ -37,6 +38,7 @@ END;
         print_r($prenom); 
         echo "<p></p>";
         var_dump($prenom);
+        echo "<p>D'accord</p>";
 
 
         ?>
