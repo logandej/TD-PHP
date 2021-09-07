@@ -14,7 +14,7 @@
            
           // On met la chaine de caractères "hello" dans la variable 'texte'
           // Les noms de variable commencent par $ en PHP
-          echo "<p><strong><h3>https://webinfo.iutmontp.univ-montp2.fr/~dejesusl/PHP/TD1/echo.php</h3></strong></p>";
+          echo "<center><p><strong><h3>https://webinfo.iutmontp.univ-montp2.fr/~dejesusl/PHP/TD1/echo.php</h3></strong></p>";
           $texte = "hello Logan oui\n!";
 
           // On écrit le contenu de la variable 'texte' dans la page Web
@@ -25,20 +25,32 @@
 
 
          
-        echo "<p><strong> Echo sur plusieurs lignes </strong></p>";
+        echo "<p><strong> 1) Echo sur plusieurs lignes </strong></p>";
         $prenom="Helmut";
         echo <<< END
-             <p>Ligne1</p>
+             <center><p>Ligne1</p>
              <p>Ligne2</p>
-             <p>Ligne3</p>
+             <p>Ligne3</p></center>
 END;
 
-        echo "<p><strong> Les print_r et var_dump sur les variables </strong></p>";
+        echo "<p><strong> 2) Les print_r et var_dump sur les variables </strong></p>";
 
         print_r($prenom); 
         echo "<p></p>";
         var_dump($prenom);
         echo "<p>D'accord</p>";
+
+        echo "<p><strong> 3) Tableaux Associatifs </strong></p>";
+
+        $mon_tableau = array();
+
+        $coordonnees['prenom'] = 'Logan';
+        $coordonnees['nom'] = 'De Jesus';
+
+        echo $coordonnees['prenom'];
+        echo "<p></p>";
+        echo $coordonnees['nom'];
+
 
 
         ?>
