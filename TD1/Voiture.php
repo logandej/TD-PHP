@@ -25,15 +25,16 @@ class Voiture {
               
     // une methode d'affichage.
     public function afficher() {
-      system
+      echo "  Marque :  ",$this->getMarque(), "  ||  Couleur :  ", $this->GetCouleur(), "  ||  Immatriculation:  ", $this->GetImmatriculation();
+
     }
 
     //getter
     public function GetImmatriculation(){
-        return this->immatriculation;
+        return $this->immatriculation;
     }
     public function GetCouleur(){
-        return this->couleur;
+        return $this->couleur;
     }
 
     //setter

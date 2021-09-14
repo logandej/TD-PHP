@@ -117,7 +117,7 @@ END;
         //print_r($voitures);
         echo "<ul>";
             foreach ($voitures as $cle => $valeur){
-                echo "<li> Voiture  ",$valeur['immatriculation'] ," de marque ",$valeur['marque'] ," (couleur", $valeur['couleur']," )</li>";
+                echo "<li> Voiture  ",$valeur['immatriculation'] ," de marque ",$valeur['marque'] ," (couleur ", $valeur['couleur'],")</li>";
             }
         echo "</ul>";
 
