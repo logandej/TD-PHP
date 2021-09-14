@@ -22,8 +22,9 @@ class Model {
    public static function getPDO(){
     if(self::$pdo==NULL){
          self::$pdo=is_null();
+       }
     else return self::$pdo;
-    }
+    
    }
 
   
