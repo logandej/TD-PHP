@@ -1,11 +1,10 @@
 <?php
+require_once 'Conf.php';
+
 class Model {
 
-  require_once("Conf.php");
-   
 
   
-
   private static $pdo = NULL;
 
   
@@ -15,15 +14,15 @@ class Model {
     $hostname=Conf::getHostName();
     $database_name=Conf::getDataBase();
     $login=Conf::getLogin();
-    $password=Conf::Password();
+    $password=Conf::getPassword();
     self::$pdo = new PDO("mysql:host=$hostname;dbname=$database_name",$login,$password);
   }
    
    public static function getPDO(){
-    if(self::$pdo==NULL){
-         self::$pdo=is_null();
+    if(is_null(self::$pdo)){
+         self::init();
        }
-    else return self::$pdo;
+    return self::$pdo;
     
    }
 
