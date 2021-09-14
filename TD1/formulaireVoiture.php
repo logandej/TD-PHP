@@ -22,7 +22,11 @@
               <input type="text" placeholder="Ex: Jaune" name="Couleur" id="couleur" required/>
             </p>
             <p>
-              <input type="submit" value="Envoyer" />
+              
+            <a href="https://webinfo.iutmontp.univ-montp2.fr/~dejesusl/PHP/TD1/creerVoiture.php">
+                <input type="submit" value="Envoyer" />
+            </a>
+
             </p>
         </fieldset> 
         </form>
