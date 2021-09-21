@@ -34,11 +34,26 @@ class Voiture {
     }
 
     public static function getVoitureByImmat($immat) {
-        $sql = "SELECT * from voiture WHERE immatriculation='$immat'";
-        $rep = Model::getPDO()->query($sql);
-        $rep->setFetchMode(PDO::FETCH_CLASS, 'Voiture');
-        return $rep->fetch();
+        $sql = "SELECT * from voiture WHERE immatriculation=:nom_tag";
+        // Préparation de la requête
+        $req_prep = Model::getPDO()->prepare($sql);
+
+        $values = array(
+            "nom_tag" => $immat,
+            //nomdutag => valeur, ...
+        );
+        // On donne les valeurs et on exécute la requête
+        $req_prep->execute($values);
+
+        // On récupère les résultats comme précédemment
+        $req_prep->setFetchMode(PDO::FETCH_CLASS, 'Voiture');
+        $tab_voit = $req_prep->fetchAll();
+        // Attention, si il n'y a pas de résultats, on renvoie false
+        if (empty($tab_voit))
+            return false;
+        return $tab_voit[0];
     }
+
 
 
     // une methode d'affichage.
@@ -77,6 +92,18 @@ class Voiture {
             echo "<br>";
         }*/
         return $tab_voit;
+    }
+    public function save(){
+        $sql = "INSERT INTO voiture (marque, couleur, immatriculation) VALUES (:Marque, :Couleur, :Imma)";
+        // Préparation de la requête
+        $req_prep = Model::getPDO()->prepare($sql);
+        $values = array(
+            "Marque" => $this->marque,
+            "Couleur" => $this->couleur,
+            "Imma" => $this->immatriculation,
+        );
+        // On donne les valeurs et on exécute la requête
+        $req_prep->execute($values);
     }
 }
 ?>

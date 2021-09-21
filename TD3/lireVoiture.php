@@ -23,8 +23,11 @@ require_once 'Trajet.php';
         $valeur->afficher();
         echo "<br>";
     }
-    $myvoit = Voiture::getVoitureByImmat(CS047GQ);
+    $myvoit = Voiture::getVoitureByImmat('CS047HD');
     var_dump($myvoit);
+
+    $voiture1 = new Voiture("Peugeot","violet","CS-047-GQ");
+    $voiture1->save();
 
 
 
