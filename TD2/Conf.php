@@ -35,7 +35,15 @@ class Conf {
     //en PHP l'indice d'un tableau n'est pas forcement un chiffre.
     return self::$databases['password'];
   }
+    // la variable debug est un boolean
+    static private $debug = True;
 
-   
+    static public function getDebug() {
+        return self::$debug;
+    }
+
+
+
+
 }
 ?>

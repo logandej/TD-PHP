@@ -17,10 +17,12 @@ class Utilisateur {
     }
    
     // un constructeur
-    public function __construct($m, $c, $i) {
-        $this->login = $m;
-        $this->nom = $c;
-        $this->prenom = $i;
+    public function __construct($m = NULL, $c = NULL, $i = NULL) {
+        if(!is_null($m) && !is_null($c) && !is_null($i)) {
+            $this->login = $m;
+            $this->nom = $c;
+            $this->prenom = $i;
+        }
     } 
               
 }
