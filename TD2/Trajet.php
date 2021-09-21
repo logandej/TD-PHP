@@ -34,7 +34,10 @@ class Trajet {
 
     }
     // une methode d'affichage.
+    public function afficher() {
+        echo "  date:  ",$this->date, "  ||  depart:  ", $this->départ, "  ||  arrivée  ", $this->arrivee, "  ||  prix  ", $this->prix;
 
+    }
 
     public static function getAllTrajets(){
 
@@ -43,9 +46,9 @@ class Trajet {
         $pdo = Model::getPDO();
         $rep = $pdo->query('SELECT * FROM trajet');
         $rep->setFetchMode(PDO::FETCH_CLASS, 'Trajet');
-        $tab_traj = $rep->fetchAll();
+        $tab_trajet = $rep->fetchAll();
 
-        return $tab_traj;
+        return $tab_trajet;
     }
               
 }
