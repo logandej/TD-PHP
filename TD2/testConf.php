@@ -11,4 +11,5 @@
   echo Conf::getDatabase();
   echo "<br>";
   echo Conf::getPassword();
+
 ?>
