@@ -3,12 +3,7 @@ require_once 'Conf.php';
 
 class Model {
 
-
-  
   private static $pdo = NULL;
-
-  
-
 
   public static function init(){
     $hostname=Conf::getHostName();

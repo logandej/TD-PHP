@@ -7,5 +7,8 @@ require_once "Model.php";
 // SQLSTATE[HY000] [1045] Access denied for user ... (mauvais mot de passe)
 // ou
 // SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed (mauvais hostname)
+echo "<center><strong>Voici le lien</strong>";
+echo "<br>";
 echo Model::getPDO()->getAttribute(PDO::ATTR_CONNECTION_STATUS);
+echo "</center>";
 ?>
