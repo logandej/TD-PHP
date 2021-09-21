@@ -8,16 +8,20 @@
     <body>
     	<?php
     		require_once("Voiture.php");
-    		$voiture1 = new Voiture("Clio","jaune","CS-047-GQ");
+            require_once("Model.php");
+    		$voiture1 = new Voiture($_GET['marque'],$_GET['Couleur'],$_GET['immatriculation']);
+    		$voiture1->save();
 
     		echo "<center><p><strong><h3>Yes</h3></strong></p>";
 
     		$voiture1->afficher();
+    		echo "La voiture à été enregistrée !"
       ?>
         
     	<p>L'Immatricualtion est <?php echo $_GET['immatriculation']; ?> !</p>
     	<p>La marque est <?php echo $_GET['marque']; ?> !</p>
     	<p>La couleur est <?php echo $_GET['Couleur']; ?> !</p>
+
     </body>
 
 </html>
