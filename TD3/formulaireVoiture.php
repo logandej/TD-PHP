@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title> Mon premier php </title>
+        <link rel="stylesheet" href="style.css">
     </head>
    
     <body>

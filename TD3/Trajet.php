@@ -50,6 +50,29 @@ class Trajet {
 
         return $tab_trajet;
     }
+
+    public static function findPassagers($id){
+        require_once 'Utilisateur.php';
+
+        $sql = "SELECT * FROM utilisateur U
+                            JOIN passager P ON P.utilisateur_login = U.login
+                            JOIN trajet T ON T.id = P.trajet_id
+                            WHERE id=:idU";
+        // Préparation de la requête
+        $req_prep = Model::getPDO()->prepare($sql);
+        $pdo = Model::getPDO();
+        $values = array(
+            "idU" => $id,
+            //nomdutag => valeur, ...
+        );
+        $req_prep->execute($values);
+
+
+        $req_prep->setFetchMode(PDO::FETCH_CLASS, 'Utilisateur');
+        $utilisatueurID = $req_prep->fetchAll();
+
+        return $utilisatueurID;
+    }
               
 }
 ?>
