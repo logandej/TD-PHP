@@ -25,7 +25,7 @@
             <p>
               
             <a href="https://webinfo.iutmontp.univ-montp2.fr/~dejesusl/PHP/TD1/creerVoiture.php">
-                <input type="submit" value="Envoyer" />
+                <input class="button" type="submit" value="Envoyer" />
             </a>
 
             </p>

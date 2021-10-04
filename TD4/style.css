@@ -3,4 +3,20 @@ body{
     background-size: 100%;
     text-align: center;
     color: white;
+    font-family: "DejaVu Sans";
+
+}
+input{
+    background-color: skyblue;
+    border: 4px solid blueviolet ;
+}
+.button{
+    background-color: dodgerblue;
+    border: 10px solid darkred ;
+    padding: 10px;
+    color: black;
+}
+.button:hover{
+    background-color: darkgreen;
+    padding: 12px;
 }
