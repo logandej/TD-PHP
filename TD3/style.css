@@ -12,11 +12,10 @@ input{
 }
 .button{
     background-color: dodgerblue;
-    border: 10px solid darkred ;
+    border: 10px solid skyblue ;
     padding: 10px;
     color: black;
 }
 .button:hover{
     background-color: darkgreen;
-    padding: 12px;
 }

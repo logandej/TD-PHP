@@ -12,7 +12,7 @@ input{
 }
 .button{
     background-color: dodgerblue;
-    border: 10px solid darkred ;
+    border: 10px solid dodgerblue ;
     padding: 10px;
     color: black;
 }
