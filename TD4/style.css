@@ -24,3 +24,8 @@ input{
     width: auto;
     height: auto;
 }
+fieldset{
+    width: 1000px;
+    height: 1000px;
+    background-image: url("sus.jpg");
+}

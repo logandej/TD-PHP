@@ -8,7 +8,8 @@
 <body>
 <?php
 echo "euu désolé mais la voiture n'existe pas, tape l'immatriculation à nouveau";
+
 ?>
-        <img src="../../sus.jpg">
+<fieldset></fieldset>
 </body>
 </html>
