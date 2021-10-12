@@ -1,5 +1,5 @@
 <?php
-require_once '../config/Conf.php';
+require_once ( build_path(array("config","Conf.php")));; //Conf.php
 
 class Model {
 
