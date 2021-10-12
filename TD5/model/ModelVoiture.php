@@ -1,6 +1,6 @@
 <?php
 
-require_once build_path(array("model","Model.php"));//Model.php
+require_once File::build_path(array("model","Model.php"));//Model.php
 class ModelVoiture {
 
     private $marque;

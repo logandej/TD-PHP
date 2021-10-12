@@ -7,8 +7,8 @@
 </head>
 <body>
 <?php
-require '../lib/File.php';//File.php
-require build_path(array("controller","routeur.php"));
+require 'lib/File.php';//File.php
+require File::build_path(array("controller","routeur.php"));
 ?>
 </body>
 </html>
