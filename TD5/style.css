@@ -25,7 +25,8 @@ input{
     height: auto;
 }
 .err{
-    width: 1000px;
-    height: 1000px;
+    width: 675px;
+    height: 280px;
     background-image: url("sus.jpg");
+    margin: auto;
 }
