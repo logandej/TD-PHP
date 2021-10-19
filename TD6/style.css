@@ -1,6 +1,7 @@
 body{
     background-image: url("owo2.jpg");
     background-size: 100%;
+    background-attachment: fixed;
     text-align: center;
     color: white;
     font-family: "DejaVu Sans";

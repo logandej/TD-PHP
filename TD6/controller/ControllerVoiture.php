@@ -49,6 +49,14 @@ class ControllerVoiture {
         $pagetitle='voiture créée.';
         require File::build_path(array("view","view.php")); //list.php
 
+    }
+
+    public static function error() {
+
+        $controller='voiture';
+        $view='error';
+        $pagetitle='error';
+        require File::build_path(array("view","view.php")); //list.php
 
     }
 
